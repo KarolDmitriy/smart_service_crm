@@ -18,7 +18,7 @@ def export_to_excel():
 
     file_name = REPORTS_PATH / f"report_{datetime.now():%Y%m%d_%H%M%S}.xlsx"
     df.to_excel(file_name, index=False)
-    print(f"✅ Отчёт сохранён: {file_name}")
+    print(f"Отчёт сохранён: {file_name}")
 
 def export_to_pdf():
     with get_connection() as conn:
@@ -40,4 +40,4 @@ def export_to_pdf():
 
     file_name = REPORTS_PATH / f"report_{datetime.now():%Y%m%d_%H%M%S}.pdf"
     pdf.output(file_name)
-    print(f"✅ PDF сохранён: {file_name}")
+    print(f"PDF сохранён: {file_name}")
